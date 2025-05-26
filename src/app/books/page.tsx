@@ -1,15 +1,15 @@
-import LinkedBookDetails from "@/components/LinkedBookDetails";
-import { getBooksByKeyword } from "@/lib/getter";
+// import LinkedBookDetails from "@/components/LinkedBookDetails";
+// import { getBooksByKeyword } from "@/lib/getter";
 
 export default async function BookResult() {
-  const keyword = "React";
-  const books = await getBooksByKeyword(keyword);
+  // const keyword = "React";
+  // const books = await getBooksByKeyword(keyword);
 
   return (
     <>
-      {books.map((b, i) => (
+      {/* {books.map((b, i) => (
         <LinkedBookDetails book={b} index={i + 1} key={b.id} />
-      ))}
+      ))} */}
     </>
   );
 }
