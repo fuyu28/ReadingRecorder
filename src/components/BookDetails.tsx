@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { reviews } from "@/generated/prisma";
+import { ReviewInput } from "@/types/Review";
 
 export type BookDetailsProps = {
-  index: number;
-  book: reviews;
+  index?: number;
+  book: ReviewInput;
 };
 
 export default function BookDetails({ index, book }: BookDetailsProps) {
@@ -18,7 +18,7 @@ export default function BookDetails({ index, book }: BookDetailsProps) {
         <ul className="list-none text-black ml-4">
           <li>{index && index + "."}</li>
           <li>
-            {book.title} ({book.price}円)
+            {book.title} ({book.price !== 0 ? book.price : "?"}円)
           </li>
           <li>{book.author}</li>
           <li>{book.publisher}刊</li>

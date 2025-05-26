@@ -1,10 +1,10 @@
 import Link from "next/link";
 import BookDetails from "./BookDetails";
-import { reviews } from "@/generated/prisma";
+import { ReviewInput } from "@/types/Review";
 
 type LinkedBookDetailsProps = {
   index: number;
-  book: reviews;
+  book: ReviewInput;
 };
 
 export default function LinkedBookDetails({
