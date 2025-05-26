@@ -4,7 +4,7 @@ import LinkedBookDetails from "@/components/LinkedBookDetails";
 export default async function BookResult({
   params,
 }: {
-  params: { keyword: string };
+  params: Promise<{ keyword: string }>;
 }) {
   const { keyword } = await params;
   const books = await getBooksByKeyword(keyword);
